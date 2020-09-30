@@ -1,15 +1,23 @@
 import React from 'react';
 import Footer from './components/Footer';
 import Header from './components/Header';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import Home from './views/Home';
+import About from './views/About';
 
 function App() {
   return (
-    <div className="App">
+    <div className="p-3">
         <Router>
           <Header />
-          <Route exact path="/"><h2>Home Page!</h2></Route>
-          <Route path="/about"><h2>About Page!</h2></Route>
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/about">
+              <About />
+            </Route>
+          </Switch>
         </Router>  
         <Footer />
     </div>
@@ -17,4 +25,3 @@ function App() {
 }
 
 export default App;
-
