@@ -16,7 +16,8 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
     "react-spring": "^8.0.27",
-    "tailwindcss": "^1.8.10"
+    "tailwindcss": "^1.8.10",
+    "yarn": "^1.22.10"
   },
   "scripts": {
     "build:css": "postcss src/index.css -o src/tailwind.css",
@@ -40,5 +41,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "postcss.config.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kultosh/begin-react-easy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kultosh/begin-react-easy/issues"
+  },
+  "homepage": "https://github.com/kultosh/begin-react-easy#readme"
 }

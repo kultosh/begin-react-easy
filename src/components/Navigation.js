@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import {useTransition, animated} from 'react-spring';
 import {Link} from 'react-router-dom';
+import NavigationMenu from './NavigationMenu';
 
 function Navigation() {
     const[showMenu, setShowMenu] = useState(false);
@@ -38,21 +39,17 @@ function Navigation() {
                 )
             }
 
-        {
-            menuTransitions.map(({item,key,props}) =>
-                item && < animated.div key = {
-                    key
-                }
-                style = {props}
-                className = "fixed bg-white top-0 left-0 w-4/5 h-full z-50 shadow" > 
-                <span className="font-bold">The Menu</span>
-                <ul>
-                    <li><Link to="/" onClick={() => setShowMenu(false)}>Home</Link></li>
-                    <li><Link to="/about" onClick={() => setShowMenu(false)}>About</Link></li>
-                </ul>
-                </animated.div>
-            )
-        }
+            {
+                menuTransitions.map(({item,key,props}) =>
+                    item && < animated.div key = {
+                        key
+                    }
+                    style = {props}
+                    className = "fixed bg-white top-0 left-0 w-4/5 h-full z-50 shadow" > 
+                    <NavigationMenu closeMenu={() => setShowMenu(false)}/>
+                    </animated.div>
+                )
+            }
         </nav>
     )
 }
